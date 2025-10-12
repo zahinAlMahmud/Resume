@@ -1,11 +1,60 @@
-import React from 'react'
+import React from 'react';
+import Image from '../assets/image/zahin.jpg';
 
- function Home() {
+function Home() {
   return (
-    <div className='d-flex align-items-center bg-danger justify-content-between p-3'>
-      <h5>Name : Zahin al Mahmud </h5>
-      <img src="data:image/jpeg;base64,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" alt="" />
+    <div
+      className="d-flex flex-column flex-md-row align-items-center justify-content-between p-4 rounded"
+      style={{
+        background: 'linear-gradient(135deg, #e0e0e0, #f5f5f5, #333)',
+        color: 'white',
+        width: '100%',
+        boxSizing: 'border-box',
+      }}
+    >
+      {/* Left Section: Name, Role, Skills */}
+      <div className="text-center text-md-start flex-1 mb-3 mb-md-0">
+        <h2
+          className="fw-bold mb-2"
+          style={{ fontSize: 'clamp(20px, 4vw, 32px)' }}
+        >
+          Zahin Al Mahmud
+        </h2>
+        <h5
+          className="mb-3"
+          style={{ fontSize: 'clamp(14px, 2vw, 18px)' }}
+        >
+          Frontend & Backend Developer
+        </h5>
+
+        {/* Skills badges */}
+        <div className="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
+          <span className="badge bg-dark">React.js</span>
+          <span className="badge bg-secondary">Node.js</span>
+          <span className="badge bg-info text-dark">Vue.js</span>
+          <span className="badge bg-success">API Integration</span>
+        </div>
+      </div>
+
+      {/* Right Section: Profile Image */}
+      <div className="d-flex justify-content-center flex-shrink-0 mt-3 mt-md-0">
+        <img
+          src={Image}
+          alt="Profile"
+          className="img-fluid"
+          style={{
+            width: 'clamp(120px, 25vw, 150px)',
+            height: 'clamp(120px, 25vw, 150px)',
+            borderRadius: '50%',
+            objectFit: 'cover',
+            border: '4px solid white',
+            boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+            transition: 'transform 0.3s ease',
+          }}
+        />
+      </div>
     </div>
-  )
+  );
 }
-export default Home
+
+export default Home;

@@ -1,61 +1,59 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Image from '../assets/image/zahin.jpg';
 
-function Education() {
-  const educationList = [
-    {
-      text: 'Bachelor of Science in Computer Science',
-      school: 'XYZ University',
-      bg: 'bg-primary text-white',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/School_icon.svg',
-    },
-    {
-      text: 'High School Diploma',
-      school: 'ABC High School',
-      bg: 'bg-success text-white',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/School_icon.svg',
-    },
-    {
-      text: 'Online Web Development Course',
-      school: 'FreeCodeCamp',
-      bg: 'bg-info text-white',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/School_icon.svg',
-    },
-  ];
-
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % educationList.length);
-    }, 2500); // change every 2.5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
+function Home() {
   return (
-    <div className="container my-5">
-      {/* Heading */}
-      <h1 className="text-center mb-4">Education</h1>
+    <div
+      className="d-flex flex-column flex-md-row align-items-center justify-content-between p-4 rounded"
+      style={{
+        background: 'linear-gradient(135deg, #e0e0e0, #f5f5f5, #333)',
+        color: 'white',
+        width: '100%',
+        boxSizing: 'border-box',
+      }}
+    >
+      {/* Left Section: Name, Role, Skills */}
+      <div className="text-center text-md-start flex-1 mb-3 mb-md-0">
+        <h2
+          className="fw-bold mb-2"
+          style={{ fontSize: 'clamp(20px, 4vw, 32px)' }}
+        >
+          Zahin Al Mahmud
+        </h2>
+        <h5
+          className="mb-3"
+          style={{ fontSize: 'clamp(14px, 2vw, 18px)' }}
+        >
+          Frontend & Backend Developer
+        </h5>
 
-      {/* Animated Education Section */}
-      <div
-        className={`d-flex justify-content-center align-items-center vh-50 ${educationList[index].bg}`}
-        style={{ transition: 'background 0.5s ease', height: '200px' }}
-      >
-        <div className="d-flex align-items-center gap-3">
-          <img
-            src={educationList[index].img}
-            alt={educationList[index].school}
-            style={{ width: '60px', height: '60px', objectFit: 'contain' }}
-          />
-          <div>
-            <h5 className="fw-bold mb-1">{educationList[index].text}</h5>
-            <p className="mb-0">{educationList[index].school}</p>
-          </div>
+        {/* Skills badges */}
+        <div className="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
+          <span className="badge bg-dark">React.js</span>
+          <span className="badge bg-secondary">Node.js</span>
+          <span className="badge bg-info text-dark">Vue.js</span>
+          <span className="badge bg-success">API Integration</span>
         </div>
+      </div>
+
+      {/* Right Section: Profile Image */}
+      <div className="d-flex justify-content-center flex-shrink-0 mt-3 mt-md-0">
+        <img
+          src={Image}
+          alt="Profile"
+          className="img-fluid"
+          style={{
+            width: 'clamp(120px, 25vw, 150px)',
+            height: 'clamp(120px, 25vw, 150px)',
+            borderRadius: '50%',
+            objectFit: 'cover',
+            border: '4px solid white',
+            boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+          }}
+        />
       </div>
     </div>
   );
 }
 
-export default Education;
+export default Home;

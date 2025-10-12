@@ -1,24 +1,21 @@
-import React from 'react'
-import Home from '../../pages/Home.jsx'
-import About from '../../pages/About.jsx'
-import Contact from '../../pages/Contact.jsx';
-import Course  from '../../pages/Course'
-import Education  from '../../pages/Education'
-import Experiance  from '../../pages/Experiance'
-import Skill from '../../pages/Skill.jsx'
+import React from "react";
+import Home from "../../pages/Home.jsx";
+import About from "../../pages/About.jsx";
+import Contact from "../../pages/Contact.jsx";
+import Education from "../../pages/Education";
+import Experiance from "../../pages/Experiance";
+import Skill from "../../pages/Skill.jsx";
 
-
- function MainContent() {
+function MainContent() {
   return (
     <div>
-      <Home/>
-      <About/>
-      <Contact/>
-      <Course/>
-      <Education/>
-      <Experiance/>
-      <Skill/>
+      <Home />
+      <About />
+      <Education />
+      <Skill />
+      <Experiance />
+      <Contact />
     </div>
-  )
+  );
 }
 export default MainContent;
